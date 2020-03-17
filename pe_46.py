@@ -7,15 +7,7 @@ Problem statement: https://projecteuler.net/problem=46
 @author: fmalgarini
 """
 import math
-
-def is_prime(n):
-    #Function to check if an integer n is prime
-
-    for i in range(2, math.ceil(math.sqrt(n) + 1)):
-        if n % i == 0:
-            return False
-
-    return True
+from mod.modules import is_prime
 
 def check_goldbach(prime_list, x):
     #Function to check if an odd composite integer x satisfies i + 2*j^2 = x, where i is a prime number and j is an integer
