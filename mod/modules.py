@@ -20,7 +20,7 @@ def euler_prime_test(n, cont):
 
     a = random.randint(2, n-1)
     x = pow(a, int((n-1)//2), n)
-    
+
     if cont < 20:
         if x == 1 or x == n-1:
             cont += 1
@@ -64,3 +64,15 @@ def miller_rabin(n, k):
         else:
             return False
     return True
+
+def triang_numbers(n):
+
+    tn, i = 0, 1
+    if n<=0:
+        return 0
+
+    while i<=n:
+        tn += i
+        i += 1
+
+    return tn
